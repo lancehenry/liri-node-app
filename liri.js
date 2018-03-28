@@ -57,7 +57,7 @@ function myTweets() {
   // This should go through the "./keys.js" file and grab Twitter access keys
   var client = new Twitter(keys.twitter);
 
-  // Reference twitter npm documentation for below
+  // Referenced twitter npm documentation for below
   var params = {
     screen_name: "@schmittling2",
     count: 20
@@ -78,6 +78,9 @@ function myTweets() {
     } 
   });
 }
+
+// Spotify function
+
 
 // Not sure what this does yet...
 // var spotify = new Spotify(keys.spotify);
