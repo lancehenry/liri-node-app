@@ -102,11 +102,13 @@ function spotifyThis() {
       if (!err) {
         console.log("");
         console.log("");
+        console.log("--------------------------------------");
         console.log("Your song: " + data.tracks.items[0].name);
         console.log("--------------------------------------");
         console.log("The artist is: " + data.tracks.items[0].artists[0].name);
         console.log("From the album: " + data.tracks.items[0].album.name);
         console.log("You can preview it here: " + data.tracks.items[0].preview_url);
+        console.log("--------------------------------------");
         console.log("");
         console.log("");
       } else {
