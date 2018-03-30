@@ -52,7 +52,6 @@ function myTweets() {
 
   // This should go through the "./keys.js" file and grab Twitter access keys
   var client = new Twitter(keys.twitter);
-  // console.log(client);
 
   // Referenced https://www.npmjs.com/package/twitter & https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html for below
   var params = {
@@ -80,21 +79,17 @@ function myTweets() {
   });
 }
 
+
 // Spotify function for returning info about a song title
 function spotifyThis() {
 
-  // Import keys.js file and store it in a variable
-  var keys = require("./keys.js");
+  if (secondInput != false) {
+    
+    var keys = require("./keys.js");
+    var Spotify = require("node-spotify-api");
+    var spotify = new Spotify(keys.spotify);
 
-  // This is requiring the Spotify NPM
-  var Spotify = require("node-spotify-api");
-
-  // This should go through the "./keys.js" file and grab Spotify access keys
-  var spotify = new Spotify(keys.spotify);
-
-  // Referenced https://www.npmjs.com/package/node-spotify-api
-  spotify.search(
-    {
+    spotify.search({
       type: "track",
       query: secondInput
     },
@@ -115,7 +110,77 @@ function spotifyThis() {
         console.log("Something went wrong: " + err);
       }
     });
+  } else {
+    var keys = require("./keys.js");
+    var Spotify = require("node-spotify-api");
+    var spotify = new Spotify(keys.spotify);
+
+    spotify.search({
+      type: "track",
+      query: "The+Sign+Ace+of+Base"
+    },
+    function(err, data) {
+      if (!err) {
+        console.log("");
+        console.log("");
+        console.log("--------------------------------------");
+        console.log("Your song: " + data.tracks.items[0].name);
+        console.log("--------------------------------------");
+        console.log("The artist is: " + data.tracks.items[0].artists[0].name);
+        console.log("From the album: " + data.tracks.items[0].album.name);
+        console.log("You can preview it here: " + data.tracks.items[0].preview_url);
+        console.log("--------------------------------------");
+        console.log("");
+        console.log("");
+      } else {
+        console.log("Something went wrong: " + err);
+      }
+    });
+  }
 }
+
+   
+
+
+// // Spotify function for returning info about a song title
+// function spotifyThis() {
+
+//   // Import keys.js file and store it in a variable
+//   var keys = require("./keys.js");
+
+//   // This is requiring the Spotify NPM
+//   var Spotify = require("node-spotify-api");
+
+//   // This should go through the "./keys.js" file and grab Spotify access keys
+//   var spotify = new Spotify(keys.spotify);
+
+//   // Referenced https://www.npmjs.com/package/node-spotify-api
+//   spotify.search(
+//     {
+//       type: "track",
+//       query: secondInput
+//     },
+//     function(err, data) {
+//       if (!err) {
+//         console.log("");
+//         console.log("");
+//         console.log("--------------------------------------");
+//         console.log("Your song: " + data.tracks.items[0].name);
+//         console.log("--------------------------------------");
+//         console.log("The artist is: " + data.tracks.items[0].artists[0].name);
+//         console.log("From the album: " + data.tracks.items[0].album.name);
+//         console.log("You can preview it here: " + data.tracks.items[0].preview_url);
+//         console.log("--------------------------------------");
+//         console.log("");
+//         console.log("");
+//       } else {
+//         console.log("Something went wrong: " + err);
+//       }
+//     });
+// }
+
+
+
 
 // Need to figure out how to return "Ace of Base: The Sign" if nothing is entered for the song title
 
