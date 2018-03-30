@@ -82,8 +82,10 @@ function myTweets() {
 
 // Spotify function for returning info about a song title
 function spotifyThis() {
+
   // This if/else statement checks to see if the secondInput is defined or undefined
   if (secondInput != false) {
+    
     // Import keys.js file and store it in a variable
     var keys = require("./keys.js");
 
@@ -118,6 +120,7 @@ function spotifyThis() {
       }
     );
   } else {
+
     // Import keys.js file and store it in a variable
     var keys = require("./keys.js");
 
@@ -156,8 +159,10 @@ function spotifyThis() {
 
 // Movie function that returns info for the movie entered
 function movieThis() {
+
   // This if/else statement checks to see if the secondInput is defined or undefined
   if (secondInput != false) {
+
     // Referenced exercise (18-OMDB_Request_Students) from class for this OMDB call
     // Request npm package
     var request = require("request");
@@ -186,6 +191,7 @@ function movieThis() {
       }
     });
   } else {
+
     // Referenced exercise (18-OMDB_Request_Students) from class for this OMDB call
     // Request npm package
     var request = require("request");
@@ -215,8 +221,6 @@ function movieThis() {
     });
   }
 }
-
-// Need to figure out how to return "Mr. Nobody" if nothing is entered for the movie title
 
 // Referenced exercise (12-ReadFile) from class to read file
 // Do What It Says function which pulls from the random.txt file text
