@@ -163,7 +163,6 @@ function movieThis() {
     var request = require("request");
 
     var queryURL ="http://www.omdbapi.com/?t=" + secondInput + "&y=&plot=short&apikey=trilogy";
-    console.log(queryURL);
 
     request(queryURL, function(error, response, body) {
       if (!error && response.statusCode === 200) {
@@ -192,7 +191,6 @@ function movieThis() {
     var request = require("request");
 
     var queryURL = "http://www.omdbapi.com/?t=Mr.+Nobody&y=&plot=short&apikey=trilogy";
-    console.log(queryURL);
 
     request(queryURL, function(error, response, body) {
       if (!error && response.statusCode === 200) {
