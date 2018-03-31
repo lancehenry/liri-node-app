@@ -8,8 +8,6 @@ Liri is a Language Interpretation and Recognition Interface. It is a command lin
 * [Table of Contents](#table-of-contents)
 * [Philosophy](#philosophy)
 * [Struggles](#struggles)
-* [Ideas for Improvement](#ideas-for-improvement)
-* [Styling](#styling)
   <!--te-->
 
 Philosophy
