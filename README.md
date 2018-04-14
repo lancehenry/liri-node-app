@@ -18,17 +18,25 @@ The concept is simple:
   
   * 'my-tweets'
     * Returns the last 20 tweets from my account
+
+![alt text](https://github.com/lschmittling/liri-node-app/blob/master/images/liri-mytweets.gif "liri-mytweets")    
   
   * 'spotify-this-song'
     * Returns information for the title of the song entered
     * If no song is entered, returns 'The Sign' by Ace of Base
+
+![alt text](https://github.com/lschmittling/liri-node-app/blob/master/images/liri-spotify.gif "liri-spotify")
   
   * 'movie-this'
     * Returns information for the title of the movie entered
     * If no song is entered, returns 'Mr. Nobody'
+
+![alt text](https://github.com/lschmittling/liri-node-app/blob/master/images/liri-movie.gif "liri-movie")    
   
   * 'do-what-it-says'
     * Reads the file random.txt and executes the command
+
+![alt text](https://github.com/lschmittling/liri-node-app/blob/master/images/liri-doit.gif "liri-doit")    
 
 Struggles
 =========
